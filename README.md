@@ -7,6 +7,7 @@ Added ReadMe for Forking Example
 2. Works in Airplane Mode
 3. Does not use the Internet. Uses bluetooth
 4. Mock up using U.S. army scenario
+5. Made by Bo Scott Pu, Eric Jiang, Hanyang Jiang
 
 # Screen Shot
 ![ScreenShot](https://github.com/BoScott/GhostChat-iOS/blob/master/IMG_2328.PNG) 
