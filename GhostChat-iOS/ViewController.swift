@@ -4,8 +4,7 @@
 //
 //  Created by GrownYoda on 4/26/15.
 //  Copyright (c) 2015 yuryg. All rights reserved.
-//  Edited by Hanyang Jiang.
-//
+//  Edits by Bo Scott Pu
 
 import UIKit
 import CoreBluetooth
@@ -58,13 +57,27 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, CBCentralMa
         
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        myTextField.resignFirstResponder()
+        nameField.resignFirstResponder()
+        
+        return false
+    }
+    
+//    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+//        myTextField.resignFirstResponder()
+//
+//    }
+    
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         advertiseNewName(myTextField.text)
         putPeripheralManagerIntoMainQueue()
         
-
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Army.jpg")!)
+        
+//        self.myTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -433,15 +446,14 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate, CBCentralMa
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //
         println("selected: \(indexPath.row)")
+        myTextField.resignFirstResponder()
+        nameField.resignFirstResponder()
+
   //      updateStatusLabel("selected: \(cleanAndSortedArray[indexPath.row].3)")
         
         
         
     }
-
-    
-    
-    
 
 }
 
